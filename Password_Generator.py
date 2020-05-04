@@ -4,11 +4,6 @@ import pandas as pd
 
 alphabet = string.ascii_letters
 
-# Importing the csv containing passwords as a csv file
-my_file='c:/Users/djw19/OneDrive/Python/Beginner Projects/Password_Generator/passwords.csv'
-df = pd.read_csv(my_file, index_col=[0])
-(x, y) = df.shape
-
 
 #Initialising the password variable and count variable
 password = ''
@@ -16,17 +11,9 @@ count = 1
 
 
 #Asking what the user wants for password length and how many numbers they want
-account = input('What account is this password for? ')
-account = account.lower()
 length = int(input('How long do you want your password to be? [6-25]? '))
 numbers = int(input('How many numbers would like you in your password? '))
 
-
-
-for i in range(0, x):
-    print(df.iloc[i][-1])
-#     if account == df.iloc[i][0]:
-#        print('hello')    
 
 
 #Creating a set of 0's of length the same as the user specified length of password.
